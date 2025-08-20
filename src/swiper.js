@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 		const swiper = new Swiper(".swiper-container", {
-			loop: true,
+			loop:true,
 			slidesPerView: 1,
 			autoplay: {
 				delay: 3000,
