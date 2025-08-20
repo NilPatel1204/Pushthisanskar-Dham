@@ -1,0 +1,13 @@
+@import "tailwindcss";
+body {
+    font-family: 'Poppins';
+}
+@media (max-width: 768px) {
+    #dropdownNavbarCampus, #dropdownNavbarActivities, #dropdownNavbarVisit, #dropdownNavbarContact {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important; /* optional: full width on mobile */
+    }
+}
