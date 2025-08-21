@@ -7,13 +7,16 @@
   <link href="./output.css" rel="stylesheet" />
   <!-- Font Family CSS -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+  <!-- Index Js -->
+  <script type="module" src="./index.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Flowbite -->
@@ -23,11 +26,11 @@
 </head>
 
 <body>
-  <header class="fixed w-full z-50">
+  <header class="sticky top-0 z-50">
     <nav class="bg-[#FFEFAA]">
       <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="../assets/pushtisanskar-dham-logo.png" alt="pushtisanskar-dham" />
+          <img class="w-[180px] lg:w-auto" src="../assets/pushtisanskar-dham-logo.png" alt="pushtisanskar-dham" />
         </a>
         <button data-collapse-toggle="navbar-multi-level" type="button"
           class="inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -40,10 +43,12 @@
         </button>
         <div class="hidden w-full md:block md:w-auto text-black" id="navbar-multi-level">
           <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-4 lg:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <!-- Home -->
             <li>
-              <a href="#" class="block py-2 px-3 rounded-sm md:bg-transparent md:p-0" aria-current="page">Home</a>
+              <a href="#"
+                class="block py-2 px-3 rounded-sm md:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                aria-current="page">Home</a>
             </li>
             <!-- Campus -->
             <li>
@@ -122,11 +127,13 @@
             </li>
             <!-- Shop -->
             <li>
-              <a href="#" class="block py-2 px-3 md:p-0">Shop</a>
+              <a href="#"
+                class="block py-2 px-3 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Shop</a>
             </li>
             <!-- Login -->
             <li>
-              <a href="#" class="block py-2 px-3 md:p-0">Login</a>
+              <a href="#"
+                class="block py-2 px-3 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Login</a>
             </li>
             <!-- Contact -->
             <li>
@@ -171,15 +178,49 @@
       </div>
     </section>
 
+    <!-- Pushthisanskar Dham -->
+    <section
+      class="py-20 md:min-h-[700px] xl:min-h-screen w-full bg-[url('../assets/about-dham-bg.png'),linear-gradient(rgba(252,239,213,0.9),rgba(252,239,213,0.9))] bg-cover  bg-center flex items-center justify-center overflow-hidden">
+      <div
+        class=" w-80 h-80 drop-shadow-[0_0_5px_rgba(0,0,0,0.05)] md:w-[440px] md:h-[440px] xl:w-[480px] xl:h-[480px] bg-white rounded-xl rotate-45 bg-[radial-gradient(circle,#FFFFFF_37%,#FFF4C6_69%,#FFE780_100%)] relative">
+        <!-- Inner content, centered -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center -rotate-45 p-2 md:p-4 ">
+
+          <!-- Logo -->
+          <img src="../assets/pushthisanskar-dham.svg" class="w-2/5 md:w-3/5 mb-1 md:mb-3" alt="pushthisanskar-dham">
+
+          <!-- Gyantirth title -->
+          <div class="items-center mb-1 md:mb-2">
+            <img src="../assets/gyantirth.svg" alt="gyantirth" class="w-2/5 md:w-auto mx-auto">
+          </div>
+
+          <!-- Description -->
+          <p class="text-[#303030] text-xs md:text-sm leading-relaxed">
+            “Pushtisanskardham“ is a project proposed by Pushtisanskar Sansthan (Institution)
+            that will take shape near Junagadh spread out approximately in 35-40 acres.
+            The project will shape up under the able guidance of
+            Rev. Goswami shri Kishorechandraji Maharajshri and Goswami shri Piyushbavashri (MotiHaveli-Junagadh).
+          </p>
+
+          <p class="text-[#303030] text-sm md:text-base font-semibold pt-2 md:pt-6">Inauguration on <span
+              class="text-[#C1282D]">26 November, 2026</span></p>
+
+          <a href=""
+            class="border-2 text-sm mt-2 hover:bg-white md:mt-6 lg:text-base border-[#F9D73A] rounded-full py-2 lg:py-2.5 px-3 lg:px-3.5 xl:px-2.5 2xl:px-3.5 transition-all duration-300 ease-in-out ">Discover
+            More</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Activity -->
-    <section class="bg-[#FFFAE5] py-20">
-      <div class="container mx-auto">
+    <section class="bg-[#FFFAE5] py-10 md:py-14 lg:py-20">
+      <div class="container px-5 md:px-0 mx-auto">
         <div class="text-center items-center">
           <h2 class="text-[#553E3F] font-bold text-4xl">Activities</h2>
           <img src="../assets/drop-line.png" alt="line" class="mx-auto">
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 mt-10">
-          <div class="px-10 space-y-5 md:relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-10 gap-y-10 lg:gap-y-16 xl:gap-y-0">
+          <div class="md:px-5 lg:px-10 xl:px-5 3xl:px-10 space-y-5 lg:relative">
             <img src="../assets/pushtisanskar-pathsala.png" alt="Pushtisanskar Pathshala" class="mx-auto">
             <div class="space-y-4">
               <p class="text-xl font-bold text-[#C1282D] mx-auto text-center">Pushtisanskar Pathshala</p>
@@ -190,19 +231,20 @@
                   growth. With 180+ centres across Gujarat, weekly sessions blend Pushtimarg values with all-round
                   personality development, complementing their regular studies.</p>
               </div>
-              <div class="md:absolute md:bottom-0 space-x-4 text-[#303030] pt-2.5 mx-auto justify-self-center">
+              <div
+                class="lg:absolute lg:bottom-0 space-x-2 flex flex-wrap gap-y-1.5 sm:gap-y-0 lg:space-x-4 text-[#303030] pt-2.5 mx-auto justify-self-center">
                 <a href=""
-                  class="border-2 border-[#F9D73A] rounded-full py-2.5 px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Join
+                  class="border-2 text-sm lg:text-base border-[#F9D73A] rounded-full py-2 lg:py-2.5 px-3 lg:px-3.5 xl:px-2.5 2xl:px-3.5 bg-white transition-all duration-300 ease-in-out font-semibold">Join
                   the Pathshala</a>
                 <a href=""
-                  class="border-2 border-[#F9D73A] rounded-full py-2.5 px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Know
+                  class="border-2 text-sm lg:text-base border-[#F9D73A] rounded-full py-2 lg:py-2.5 px-3 lg:px-3.5 xl:px-2.5 2xl:px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Know
                   How it Works</a>
               </div>
             </div>
 
           </div>
 
-          <div class="px-10 space-y-5">
+          <div class="md:px-5 lg:px-10 xl:px-5 3xl:px-10 space-y-5 md:relative lg:static xl:relative ">
             <img src="../assets/pushtisanskar-vidyapeeth.png" alt="Pushtisanskar Vidyapeeth" class="mx-auto">
             <div class="space-y-4">
               <p class="text-xl font-bold text-[#C1282D] mx-auto text-center">Pushtisanskar Vidyapeeth</p>
@@ -214,17 +256,19 @@
                 </p>
               </div>
             </div>
-            <div class="space-x-4 text-[#303030] pt-2.5 mx-auto justify-self-center">
+            <div
+              class="md:absolute md:bottom-0 lg:static xl:absolute flex flex-wrap gap-y-1.5 xl:bottom-0 space-x-2 lg:space-x-4 xl:space-x-4 text-[#303030] pt-2.5 mx-auto justify-self-center">
               <a href=""
-                class="border-2 border-[#F9D73A] rounded-full py-2.5 px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Join
+                class="border-2 text-sm lg:text-base border-[#F9D73A] rounded-full py-2 lg:py-2.5 px-2  md:px-2.5 lg:px-3.5  xl:px-2.5 2xl:px-3.5 bg-white transition-all duration-300 ease-in-out font-semibold">Join
                 the Vidyapeeth</a>
               <a href=""
-                class="border-2 border-[#F9D73A] rounded-full py-2.5 px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Know
+                class="border-2 text-sm lg:text-base border-[#F9D73A] rounded-full py-2 lg:py-2.5 px-2 md:px-2.5 lg:px-3.5 xl:px-2.5 2xl:px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Know
                 How it Works</a>
             </div>
           </div>
 
-          <div class="px-10 space-y-5">
+          <div
+            class="md:px-5 lg:px-10 xl:px-5 3xl:px-10 space-y-5 md:col-span-2 xl:col-span-1 md:w-1/2 xl:w-auto md:justify-self-center xl:justify-self-auto">
             <img src="../assets/pushtisanskar-unity.png" alt="Pushtisanskar Unity" class="mx-auto">
             <div class="space-y-4">
               <p class="text-xl font-bold text-[#C1282D] mx-auto text-center">Pushtisanskar Unity</p>
@@ -236,12 +280,13 @@
                   purpose, inspiring youth to uphold eternal values and positively impact society.</p>
               </div>
             </div>
-            <div class="space-x-4 text-[#303030] pt-2.5 mx-auto justify-self-center">
+            <div
+              class="space-x-2 md:space-x-4 text-[#303030] flex flex-wrap gap-y-1.5 pt-2.5 mx-auto justify-self-center">
               <a href=""
-                class="border-2 border-[#F9D73A] rounded-full py-2.5 px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Join
+                class="border-2 text-sm md:text-base border-[#F9D73A] rounded-full py-2 lg:py-2.5 px-2 md:px-2.5 lg:px-3.5 xl:px-2.5 2xl:px-3.5 bg-white transition-all duration-300 ease-in-out font-semibold">Join
                 Us</a>
               <a href=""
-                class="border-2 border-[#F9D73A] rounded-full py-2.5 px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Know
+                class="border-2 text-sm md:text-base border-[#F9D73A] rounded-full py-2 lg:py-2.5 px-2 md:px-2.5 lg:px-3.5 xl:px-2.5 2xl:px-3.5 hover:bg-white transition-all duration-300 ease-in-out font-semibold">Know
                 How it Works</a>
             </div>
           </div>
@@ -250,13 +295,13 @@
     </section>
 
     <!-- Events -->
-    <section class="py-20 container mx-auto">
+    <section class="py-10 md:py-14 lg:py-20 container mx-auto  md:px-5 lg:px-0">
       <div class="text-center items-center relative">
         <h2 class="text-[#553E3F] font-bold text-4xl">Events</h2>
         <img src="../assets/drop-line.png" alt="line" class="mx-auto">
         <div class="absolute right-0 top-0  lg:mt-0 mb-0 md:mb-0 lg:mb-2 hidden md:flex space-x-8">
           <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold">See All Events</a>
-          <div class="rounded-full p-2 border border-[#DED9C0] space-x-3 flex">
+          <div class="nav-wrapper rounded-full p-2 border border-[#DED9C0] space-x-3 flex">
             <button class="prev-button align-text-top cursor-pointer">
               <img src="../assets/left-slider-arrow.svg" alt="arrow-left">
             </button>
@@ -275,16 +320,21 @@
             <div class="swiper-slide p-3 md:p-0 ">
               <div class="rounded-2xl  shadow-[0_5px_5px_rgba(0,0,0,.1)]">
                 <div class="relative">
-                  <img class="w-full rounded-t-2xl" src="../assets/Pushtisanskardham-Nirman-Prarambh-Mahotsav.png" alt="Pushtisanskardham-Nirman-Prarambh-Mahotsav">
-                  <p class="absolute top-3 right-3 p-1.5 bg-[#C1282D] text-white rounded-lg font-semibold text-sm">Upcoming</p>
+                  <img class="w-full rounded-t-2xl" src="../assets/Pushtisanskardham-Nirman-Prarambh-Mahotsav.png"
+                    alt="Pushtisanskardham-Nirman-Prarambh-Mahotsav">
+                  <p class="absolute top-3 right-3 p-1.5 bg-[#C1282D] text-white rounded-lg font-semibold text-sm">
+                    Upcoming</p>
                 </div>
                 <div class="p-5 space-y-5 relative min-h-[270px]">
                   <div class="space-y-2.5">
                     <p class="text-[#575757]">12th Jan, 2020</p>
-                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">Pushtisanskardham Nirman Prarambh Mahotsav</p>
-                    <p class="text-lg text-[#303030]">પુષ્ટિસંસ્કારધામ નિર્માણ પ્રારંભ મહોત્સવ માં વિષ્ણુયાગ યજ્ઞ નું સુંદર આયોજન કરવામાં આવ્યું હતું.ગોસ્વામી શ્રીપીયૂષબાવાશ્રી યજ્ઞકર્મ</p>
+                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">Pushtisanskardham Nirman
+                      Prarambh Mahotsav</p>
+                    <p class="text-lg text-[#303030]">પુષ્ટિસંસ્કારધામ નિર્માણ પ્રારંભ મહોત્સવ માં વિષ્ણુયાગ યજ્ઞ નું
+                      સુંદર આયોજન કરવામાં આવ્યું હતું.ગોસ્વામી શ્રીપીયૂષબાવાશ્રી યજ્ઞકર્મ</p>
                   </div>
-                   <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ MORE</a>
+                  <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ
+                    MORE</a>
                 </div>
               </div>
             </div>
@@ -292,16 +342,20 @@
             <div class="swiper-slide p-3 md:p-0">
               <div class="rounded-2xl  shadow-[0_5px_5px_rgba(0,0,0,.1)]">
                 <div class="relative">
-                  <img class="w-full rounded-t-2xl" src="../assets/shreevallabhbavashree-birthday.png" alt="shreevallabhbavashree-birthday">
-                  <p class="absolute top-3 right-3 p-1.5 bg-white text-[#303030] rounded-lg font-semibold text-sm">Completed</p>
+                  <img class="w-full rounded-t-2xl" src="../assets/shreevallabhbavashree-birthday.png"
+                    alt="shreevallabhbavashree-birthday">
+                  <p class="absolute top-3 right-3 p-1.5 bg-white text-[#303030] rounded-lg font-semibold text-sm">
+                    Completed</p>
                 </div>
                 <div class="p-5 space-y-5 relative min-h-[270px]">
                   <div class="space-y-2.5">
                     <p class="text-[#575757]">14th Nov, 2019</p>
-                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">ગોસ્વામી શ્રીવ્રજવલ્લભબાવાશ્રી નો જન્મદિવસ</p>
+                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">ગોસ્વામી શ્રીવ્રજવલ્લભબાવાશ્રી
+                      નો જન્મદિવસ</p>
                     <p class="text-lg text-[#303030]">કારતક કૃષ્ણ દ્વિતીયાના</p>
                   </div>
-                  <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ MORE</a>
+                  <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ
+                    MORE</a>
                 </div>
               </div>
             </div>
@@ -310,15 +364,18 @@
               <div class="rounded-2xl  shadow-[0_5px_5px_rgba(0,0,0,.1)]">
                 <div class="relative">
                   <img class="w-full rounded-t-2xl" src="../assets/new-building-event.png" alt="new-building-event">
-                  <p class="absolute top-3 right-3 p-1.5 bg-white text-[#303030] rounded-lg font-semibold text-sm">Completed</p>
+                  <p class="absolute top-3 right-3 p-1.5 bg-white text-[#303030] rounded-lg font-semibold text-sm">
+                    Completed</p>
                 </div>
                 <div class="p-5 space-y-5 relative min-h-[270px]">
                   <div class="space-y-2.5">
                     <p class="text-[#575757]">04th Oct, 2019</p>
-                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">શ્રીવલ્લભાચાર્યવિદ્યાસંકુલ નવા બિલ્ડીંગનું શિલાન્યાસ</p>
+                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">શ્રીવલ્લભાચાર્યવિદ્યાસંકુલ નવા
+                      બિલ્ડીંગનું શિલાન્યાસ</p>
                     <p class="text-lg text-[#303030]">ગોસ્વામી શ્રીકિશોરચંદ્રજી મહારાજશ્રી એવમ્ ગોસ્વામી શ્રીપીયૂષબ </p>
                   </div>
-                   <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ MORE</a>
+                  <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ
+                    MORE</a>
                 </div>
               </div>
             </div>
@@ -327,62 +384,76 @@
               <div class="rounded-2xl  shadow-[0_5px_5px_rgba(0,0,0,.1)]">
                 <div class="relative">
                   <img class="w-full rounded-t-2xl" src="../assets/pravachan-satra.png" alt="pravachan-satra">
-                  <p class="absolute top-3 right-3 p-1.5 bg-white text-[#303030] rounded-lg font-semibold text-sm">Completed</p>
+                  <p class="absolute top-3 right-3 p-1.5 bg-white text-[#303030] rounded-lg font-semibold text-sm">
+                    Completed</p>
                 </div>
                 <div class="p-5 space-y-5 relative min-h-[270px]">
                   <div class="space-y-2.5">
                     <p class="text-[#575757]">27th Jan, 2019</p>
-                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">કેશોદના આંગણે નિરોધલક્ષણ પર ત્રિદિવસીય પ્રવચન સત્ર</p>
-                    <p class="text-lg text-[#303030]">પુષ્ટિસંસ્કારધામ નિર્માણ પ્રારંભ મહોત્સવ માં વિષ્ણુયાગ યજ્ઞ નું સુંદર આયોજન કરવામાં આવ્યું હતું.ગોસ્વામી શ્રીપીયૂષબાવાશ્રી યજ્ઞકર્મ</p>
+                    <p class="font-bold text-[#C1282D] text-lg font-[Noto_Sans_Gujarati]">કેશોદના આંગણે નિરોધલક્ષણ પર
+                      ત્રિદિવસીય પ્રવચન સત્ર</p>
+                    <p class="text-lg text-[#303030]">પુષ્ટિસંસ્કારધામ નિર્માણ પ્રારંભ મહોત્સવ માં વિષ્ણુયાગ યજ્ઞ નું
+                      સુંદર આયોજન કરવામાં આવ્યું હતું.ગોસ્વામી શ્રીપીયૂષબાવાશ્રી યજ્ઞકર્મ</p>
                   </div>
-                  <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ MORE</a>
+                  <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold absolute bottom-5">READ
+                    MORE</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="justify-center gap-4 lg:mt-0 mb-0 md:mb-0 lg:mb-2 flex md:hidden">
-          <button class="prev-button align-text-top cursor-pointer rounded-full border border-[#DED9C0] p-2 aspect-square">
-              <img src="../assets/left-slider-arrow.svg" alt="arrow-left">
-            </button>
-            <button class="next-button align-text-top cursor-pointer rounded-full border border-[#DED9C0] p-2 aspect-square">
-              <img src="../assets/right-slider-arrow.svg" alt="arrow-right">
-            </button>
+          <button
+            class="prev-button align-text-top cursor-pointer rounded-full border border-[#DED9C0] p-2 aspect-square">
+            <img src="../assets/left-slider-arrow.svg" alt="arrow-left">
+          </button>
+          <button
+            class="next-button align-text-top cursor-pointer rounded-full border border-[#DED9C0] p-2 aspect-square">
+            <img src="../assets/right-slider-arrow.svg" alt="arrow-right">
+          </button>
 
         </div>
       </div>
     </section>
 
     <!--  Guiding Force  -->
-    <section class="py-20 bg-[#FAEFEA] bg-[url('../assets/bg-image.png')] bg-cover bg-center bg-no-repeat">
-      <div class="container mx-auto space-y-10">
-        <div class="text-center items-center">
-          <h2 class="text-[#553E3F] font-bold text-4xl">Guiding Force</h2>
-          <img src="../assets/drop-line.png" alt="line" class="mx-auto">
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-24">
-          <div class="space-y-2.5 mx-auto text-center content-center justify-items-center">
-            <img src="../assets/Goswami-Shri-Kishorechandraji-Maharajshri.png" alt="Goswami-Shri-Kishorechandraji-Maharajshri">
-            <p class="text-[#C1282D] font-bold text-lg">Goswami Shri<span class="block">Kishorechandraji Maharajshri</span></p>
-            <p class="text-[#F00022] text-[13px]">Moti Haveli - Junagadh</p>
-            <p class="text-[#303030]">Goswami Shree Kishorechandraji Maharajshri is born in the lineage of Mahaprabhu Shree Vallabhacharyaji.</p>
-            <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold ">READ MORE</a>
+    <section class=""
+      style="background: linear-gradient(180deg,rgba(250, 239, 234, 1) 0%,rgba(250, 239, 234, 1) 100%);">
+      <div class="py-10 md:py-14 lg:py-20 bg-[url('../assets/bg-image.png')] bg-cover bg-center">
+        <div class="container px-5  mx-auto space-y-10">
+          <div class="text-center items-center space-y-1.5">
+            <h2 class="text-[#553E3F] font-bold text-4xl">Guiding Force</h2>
+            <img src="../assets/drop-line.png" alt="line" class="mx-auto">
           </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-24">
+            <div class="space-y-2.5 mx-auto text-center content-center justify-items-center">
+              <img src="../assets/Goswami-Shri-Kishorechandraji-Maharajshri.png"
+                alt="Goswami-Shri-Kishorechandraji-Maharajshri">
+              <p class="text-[#C1282D] font-bold text-lg">Goswami Shri<span class="block">Kishorechandraji
+                  Maharajshri</span></p>
+              <p class="text-[#F00022] text-[13px]">Moti Haveli - Junagadh</p>
+              <p class="text-[#303030]">Goswami Shree Kishorechandraji Maharajshri is born in the lineage of Mahaprabhu
+                Shree Vallabhacharyaji.</p>
+              <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold ">READ MORE</a>
+            </div>
 
-          <div class="space-y-2.5 mx-auto text-center content-center justify-items-center">
-            <img src="../assets/Goswami-Shri-Piyush-Bavashri.png" alt="Goswami-Shri-Piyush-Bavashri">
-            <p class="text-[#C1282D] font-bold text-lg">Goswami Shri<span class="block">Piyush Bavashri</span></p>
-            <p class="text-[#F00022] text-[13px]">Moti Haveli - Junagadh</p>
-            <p class="text-[#303030]">Adopting this deﬁnition, Our Acharya Goswami Shri Piyush Bavashri constantly trying to fulﬁl his duties as an Acharya; has quite an astounding personality.</p>
-            <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold ">READ MORE</a>
-          </div>
+            <div class="space-y-2.5 mx-auto text-center content-center justify-items-center">
+              <img src="../assets/Goswami-Shri-Piyush-Bavashri.png" alt="Goswami-Shri-Piyush-Bavashri">
+              <p class="text-[#C1282D] font-bold text-lg">Goswami Shri<span class="block">Piyush Bavashri</span></p>
+              <p class="text-[#F00022] text-[13px]">Moti Haveli - Junagadh</p>
+              <p class="text-[#303030]">Adopting this deﬁnition, Our Acharya Goswami Shri Piyush Bavashri constantly
+                trying to fulﬁl his duties as an Acharya; has quite an astounding personality.</p>
+              <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold ">READ MORE</a>
+            </div>
 
-          <div class="space-y-2.5 mx-auto text-center content-center justify-items-center">
-            <img src="../assets/Shri-Vrajvallabh -Bavashri.png" alt="Shri-Vrajvallabh -Bavashri">
-            <p class="text-[#C1282D] font-bold text-lg">Shri<span class="block">Vrajvallabh  Bavashri</span></p>
-            <p class="text-[#F00022] text-[13px]">Moti Haveli - Junagadh</p>
-            <p class="text-[#303030]">Goswami Shree Kishorechandraji Maharajshri is born in the lineage of Mahaprabhu Shree Vallabhacharyaji.</p>
-            <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold ">READ MORE</a>
+            <div class="space-y-2.5 mx-auto text-center content-center justify-items-center">
+              <img src="../assets/Shri-Vrajvallabh -Bavashri.png" alt="Shri-Vrajvallabh -Bavashri">
+              <p class="text-[#C1282D] font-bold text-lg">Shri<span class="block">Vrajvallabh Bavashri</span></p>
+              <p class="text-[#F00022] text-[13px]">Moti Haveli - Junagadh</p>
+              <p class="text-[#303030]">Goswami Shree Kishorechandraji Maharajshri is born in the lineage of Mahaprabhu
+                Shree Vallabhacharyaji.</p>
+              <a href="" class="text-[#303030] border-b-4 border-[#F9D73A] font-semibold ">READ MORE</a>
+            </div>
           </div>
         </div>
       </div>
@@ -391,57 +462,112 @@
 
   <!-- Footer -->
   <footer>
-    <div class="bg-[#553E3F] py-20">
-      <div class="container mx-auto grid grid-cols-12 gap-5">
+    <div class="bg-[#553E3F] py-10 md:py-14 lg:py-20">
+      <div class="container px-5 lg:px-0 mx-auto grid grid-cols-12 gap-y-10 md:gap-y-16 xl:gap-y-0 md:gap-5">
         <div class="col-span-12 xl:col-span-3 space-y-6">
           <img src="../assets/pushtisanskar-dham-footer-logo.png" alt="pushtisanskar-dham-footer-logo">
-          <p class="text-sm text-[#E5E5E5] leading-7">Pushtisanskardham is a project proposed by Pushtisanskar Sansthan (Institution) that will take shape near Junagadh spread out approximately in 50 acres.</p>
+          <p class="text-sm text-[#E5E5E5] leading-7">Pushtisanskardham is a project proposed by Pushtisanskar Sansthan
+            (Institution) that will take shape near Junagadh spread out approximately in 50 acres.</p>
           <div>
             <a href="" class="bg-[#F9D73A] rounded-lg py-1.5 px-2 text-[#303030]">Donate Now</a>
           </div>
         </div>
 
         <div class="col-span-12 xl:col-start-5 xl:col-span-6 ">
-          <div class="grid grid-cols-3 gap-5">
-            <div class="space-y-5">
-              <p class="font-semibold text-[22px] text-white">Activities</p>
+          <div class="grid grid-cols-12 gap-5">
+            <div class="space-y-5 col-span-12 md:col-span-4">
+              <p class="font-semibold text-lg md:text-[22px] text-white">Activities</p>
               <div class="w-11/12 font-semibold">
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">Pushtisanskar Pathshala</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">Pushtisanskar Vidyapeeth</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A]  py-4 transition-colors duration-300 ease-in-out">Pushtisanskar Unity</p></a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Pushtisanskar Pathshala</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Pushtisanskar Vidyapeeth</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A]  text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Pushtisanskar Unity</p>
+                </a>
               </div>
             </div>
 
-            <div class="space-y-5">
-              <p class="font-semibold text-[22px] text-white">Visit</p>
+            <div class="space-y-5 col-span-6 md:col-span-4">
+              <p class="font-semibold text-lg md:text-[22px] text-white">Visit</p>
               <div class="w-11/12 font-semibold">
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-opacity-50 border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">Visitor Guide</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">Book Stay</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">How to Reach</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A]  py-4 transition-colors duration-300 ease-in-out">Visitor Registration</p></a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-opacity-50 border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Visitor Guide</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Book Stay</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    How to Reach</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A]  text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Visitor Registration</p>
+                </a>
               </div>
             </div>
 
-            <div class="space-y-5">
-              <p class="font-semibold text-[22px] text-white">Useful links</p>
+            <div class="space-y-5 col-span-6 md:col-span-4">
+              <p class="font-semibold text-lg md:text-[22px] text-white">Useful links</p>
               <div class="w-11/12 font-semibold">
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-opacity-50 border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">Shop</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">Locate us</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] py-4 transition-colors duration-300 ease-in-out">Career</p></a>
-                <a href="#"><p class="text-[#E5E5E5] hover:text-[#F9D73A]  py-4 transition-colors duration-300 ease-in-out">CSR Initiative</p></a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-opacity-50 border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Shop</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Locate us</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    Career</p>
+                </a>
+                <a href="#">
+                  <p
+                    class="text-[#E5E5E5] hover:text-[#F9D73A]  text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                    CSR
+                    Initiative</p>
+                </a>
               </div>
             </div>
 
-            <div class="col-span-3 pt-8 border-t border-[rgba(256,256,256,0.15)]">
+            <div class="col-span-12 pt-5 md:pt-8 border-t border-[rgba(256,256,256,0.15)]">
               <div class="flex justify-between">
                 <button href=""
-                  class="border-2 border-[#F9D73A] hover:bg-[#E5E5E5] hover:text-[#303030] transition-all duration-300 ease-in-out text-white cursor-pointer rounded-full py-2.5 px-3.5  font-semibold">Download Brochure</button>
-                  <div class="space-x-2.5 flex">
-                    <a href="#"><img src="../assets/facebook.png" class="md:opacity-75 md:hover:opacity-100" alt="facebook"></a>
-                    <a href="#"><img src="../assets/youtube.png" class="md:opacity-75 md:hover:opacity-100" alt="youtube"></a>
-                    <a href="#"><img src="../assets/instagram.png" class="md:opacity-75 md:hover:opacity-100" alt="instagram"></a>
-                    <a href="#"><img src="../assets/linkedin.png" class="md:opacity-75 md:hover:opacity-100" alt="linkedin"></a>
-                  </div>
+                  class="border-2 text-sm md:text-base border-[#F9D73A] hover:bg-[#E5E5E5] hover:text-[#303030] transition-all duration-300 ease-in-out text-white cursor-pointer rounded-full py-2 sm:py-2.5 px-2.5 sm:px-3.5  font-semibold">Download
+                  Brochure</button>
+                <div class="space-x-1.5 sm:space-x-2.5 flex">
+                  <a href="#" class="group">
+                    <!-- <img src="../assets/facebook-icon.svg" 
+                        class="w-9 h-9 group-hover:filter group-hover:invert group-hover:sepia group-hover:hue-rotate-[20deg] group-hover:saturate-200" 
+                        alt="facebook"> -->
+                    <img src="../assets/facebook.png" class="md:opacity-75 md:hover:opacity-100" alt="facebook">
+                  </a>
+                  <a href="#"><img src="../assets/youtube.png" class="md:opacity-75 md:hover:opacity-100"
+                      alt="youtube"></a>
+                  <a href="#"><img src="../assets/instagram.png" class="md:opacity-75 md:hover:opacity-100"
+                      alt="instagram"></a>
+                  <a href="#"><img src="../assets/linkedin.png" class="md:opacity-75 md:hover:opacity-100"
+                      alt="linkedin"></a>
+                </div>
               </div>
             </div>
           </div>
@@ -449,8 +575,10 @@
 
 
         <div class="col-span-12 xl:col-span-2 space-y-5">
-          <p class="font-semibold text-[22px] text-white">Google Map</p>
-          <iframe class="rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.084544144002!2d70.51584631470993!3d21.62162898568024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39580351711f6381%3A0x8adc119d0bafe85e!2sShree+Pushtisanskar+Dham!5e0!3m2!1sen!2sin!4v1547245918982" width="100%" height="280" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+          <p class="font-semibold text-lg md:text-[22px] text-white">Google Map</p>
+          <iframe class="rounded-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.084544144002!2d70.51584631470993!3d21.62162898568024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39580351711f6381%3A0x8adc119d0bafe85e!2sShree+Pushtisanskar+Dham!5e0!3m2!1sen!2sin!4v1547245918982"
+            width="100%" height="280" frameborder="0" style="border:0" allowfullscreen=""></iframe>
         </div>
 
         <div class="col-span-12 xl:col-start-5 xl:col-span-6">
@@ -459,10 +587,17 @@
       </div>
     </div>
     <div class="bg-[#3B3434] py-7">
-        <div class="container mx-auto text-[#FFFFFF]">
-          <p>Copyright © 2025 Pushtisanskar Dham. All Rights Reserved.</p>
-        </div>
+      <div class="container px-5 md:px-0 text-sm md:text-base mx-auto text-[#FFFFFF]">
+        <p>Copyright © 2025 Pushtisanskar Dham. All Rights Reserved.</p>
+      </div>
     </div>
+
+    <!-- Scroll buttom -->
+    <a id="scrollToTopBtn" class="group w-12 h-12 bg-[#F9D73A] rounded-full fixed bottom-4 right-4 flex items-center justify-center cursor-pointer
+          opacity-0 translate-y-4 pointer-events-none transition-all duration-100 ease-in-out overflow-hidden z-100">
+      <img src="../assets/scroll-top-arrow.svg" alt="Double-Arrow"
+        class="w-3 invert-0 transition-transform duration-100 transform group-hover:animate-bounce" />
+    </a>
   </footer>
 
 
