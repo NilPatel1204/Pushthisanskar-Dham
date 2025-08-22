@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- Font Family CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Index Js -->
+    <script type="module" src="./index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+
+    <title>Pushtisanskar Dham</title>
+</head>
+
+<body>
+    <header class="sticky top-0 z-50">
+        <nav class="bg-[#FFEFAA]">
+            <div class="container mx-auto flex flex-wrap items-center justify-between p-4 lg:px-0">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img class="w-[180px] lg:w-auto" src="../assets/pushtisanskar-dham-logo.png"
+                        alt="pushtisanskar-dham" />
+                </a>
+                <button data-collapse-toggle="navbar-multi-level" type="button"
+                    class="inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-multi-level" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto text-black" id="navbar-multi-level">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-4 lg:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 rounded-sm md:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                                aria-current="page">Home</a>
+                        </li>
+                        <!-- Campus -->
+                        <li>
+                            <button id="dropdownNavbarCampusLink" data-dropdown-toggle="dropdownNavbarCampus"
+                                class="flex items-center justify-between w-full py-2 px-3 md:p-0 md:w-auto md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                                Campus
+                                <img src="../assets/down-arrow.svg" alt="down-arrow" class="ms-1" />
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarCampus"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Acharyashri</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Departments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Development Progress</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Associated
+                                            Institutions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Activities -->
+                        <li>
+                            <button id="dropdownNavbarActivitiesLink" data-dropdown-toggle="dropdownNavbarActivities"
+                                class="flex items-center justify-between w-full py-2 px-3 md:p-0 md:w-auto md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                                Activities
+                                <img src="../assets/down-arrow.svg" alt="down-arrow" class="ms-1" />
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarActivities"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Pushtisanskar
+                                            Pathshala</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Pushtisanskar
+                                            Vidyapeeth</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Pushtisanskar Unity</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Visit -->
+                        <li>
+                            <button id="dropdownNavbarVisitLink" data-dropdown-toggle="dropdownNavbarVisit"
+                                class="flex items-center justify-between w-full py-2 px-3 md:p-0 md:w-auto md:dark:hover:text-blue-500">
+                                Visit
+                                <img src="../assets/down-arrow.svg" alt="down-arrow" class="ms-1" />
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarVisit"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Guide</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Book Stay</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">How to Reach</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Registration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Shop -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Shop</a>
+                        </li>
+                        <!-- Login -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Login</a>
+                        </li>
+                        <!-- Contact -->
+                        <li>
+                            <button id="dropdownNavbarContactLink" data-dropdown-toggle="dropdownNavbarContact"
+                                class="flex items-center justify-between w-full py-2 px-3 md:p-0 md:w-auto md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">
+                                Contact
+                                <img src="../assets/down-arrow.svg" alt="down-arrow" class="ms-1" />
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarContact"
+                                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-fit">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Donate</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Locate us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Career</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSR Initiative</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Navigation -->
+        <section class="bg-[#7B524C] py-2.5 lg:py-3">
+            <div class="container mx-auto flex space-x-1.5 text-white text-sm font-medium">
+                <p><a href="../../">Home</a></p>
+                <p>></p>
+                <p><a href="">Campus</a></p>
+                <p>></p>
+                <p class="text-[#F9D73A]">Acharyashri</p>
+            </div>
+        </section>
+
+        <!-- Guiding Force -->
+        <section class="py-6 bg-[url('../assets/guiding-force-top.png')] bg-top bg-repeat-x">
+            <div class="bg-[url('../assets/guiding-force-bg.png')] bg-repeat bg-center bg-[#] py-10 md:py-14 lg:py-20 ">
+                <div class="container mx-auto grid grid-cols-12">
+                    <div class="xl:col-start-2 xl:col-span-3 space-y-4 justify-items-center text-center mx-auto">
+                        <img src="../assets/Goswami-Shri-Kishorechandraji-Maharajshri.png"
+                            alt="Goswami-Shri-Kishorechandraji-Maharajshri">
+                        <div class="space-y-2">
+                            <p class="text-[#C1282D] font-bold text-xl">Goswami Shri <span class="block">Kishorechandraji Maharajshri</span></p>
+                            <p class="font-medium text-[#303030]">(Moti Haveli - Junagadh)</p>
+                        </div>
+                    </div>
+
+                    <div class="xl:col-start-7 xl:col-span-7 space-y-4">
+                        <h2 class="text-[#C02927] font-bold text-4xl">Guiding Force</h2>
+                        <div class="space-y-4 text-[#303030] ">
+                            <p><span class="font-bold">Goswami Shree Kishorechandraji Maharajshri</span> is born in the lineage of Mahaprabhu Shree Vallabhacharyaji. He is a learned acharya; well versed with the spiritual knowledge and practical implications of it. His profound knowledge, experience and blessings are motivational for our mission.</p>
+                            <p>Gauseva is one of the important aspect of our culture. Specially in Shree Krishna Bhakti traditions; Gauseva is considered as an essential part of devotion. In general also; Gausanskruti need to be protected for the preservance of relegion. With this motive, Shree Kishorechandraji Maharajshri has created social awareness about the necessity of Gauseva. With his inspiration; more than 100 Gaushala are established in the saurastra region of Gujarat.</p>
+                            <p>Mahabrabhu Shree Vallabhacharya Gurukul(Choki-Sorath) and Shree Vallabh Gaushala(Vadala) are the institutes established under his guidance. In a way he is the pathmaker, when everyone engaged in Haveli's, Darshans and Manoraths, he stood up in the change in the vaishnava society while combining relegion with education and social reforms.</p>
+                            <p class="italic">“We are blessed to have such a divine personality as our guiding force.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
