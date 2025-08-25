@@ -11,3 +11,8 @@ body {
     width: 100% !important; /* optional: full width on mobile */
     }
 }
+
+
+.pt-serif {
+    font-family: 'PT Serif', serif;
+}
