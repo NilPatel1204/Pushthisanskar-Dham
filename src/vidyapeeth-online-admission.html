@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- Font Family CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PT Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Index Js -->
+    <script type="module" src="./index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+
+    <title>Pushtisanskar Dham</title>
+
+</head>
+
+<body>
+    <header class="sticky top-0 z-50">
+        <nav class="bg-[#FFEFAA]">
+            <div class="container mx-auto flex flex-wrap items-center justify-between p-4  ">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img class="w-[180px] lg:w-auto" src="../assets/pushtisanskar-dham-logo.png"
+                        alt="pushtisanskar-dham" />
+                </a>
+                <button data-collapse-toggle="navbar-multi-level" type="button"
+                    class="inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-multi-level" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto text-black" id="navbar-multi-level">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:hover:bg-[#C02927] lg:px-4 lg:py-2 rounded-sm md:bg-transparent md:p-0 md:hover:text-white transition-colors ease-in-out duration-200"
+                                aria-current="page">Home</a>
+                        </li>
+                        <!-- Campus -->
+                        <li>
+                            <button id="dropdownNavbarCampusLink" data-dropdown-toggle="dropdownNavbarCampus"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Campus
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarCampus"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Acharyashri</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Departments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Development Progress</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Associated
+                                            Institutions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Activities -->
+                        <li>
+                            <button id="dropdownNavbarActivitiesLink" data-dropdown-toggle="dropdownNavbarActivities"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Activities
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarActivities"
+                                class="z-10 hidden font-semibold  shadow-sm w-fit bg-[#FFB52C] transform lg:translate-y-4">
+                                <div class="grid grid-cols-3 gap-5 p-5 text-[#303030]">
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-pathsala.webp" alt="pushthisanskar-pathsala">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Search
+                                                    Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Open
+                                                    New Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Pathshala
+                                                    Student Login</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-vidyaputh.webp"
+                                            alt="pushthisanskar Vidyapeeth">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Vidyapeeth</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Various
+                                                    Courses</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Admission
+                                                    Guidelines</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Online
+                                                    Admission</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Student
+                                                    Login</a>
+                                            </div>
+                                            <div class="py-2 px-4 text-center ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Result</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-unity.webp" alt="pushthisanskar unity">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Pushtisanskar Unity</a>
+                                            </div>
+                                            <div class="py-2 px-4 text-center ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Join
+                                                    Us</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Visit -->
+                        <li>
+                            <button id="dropdownNavbarVisitLink" data-dropdown-toggle="dropdownNavbarVisit"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Visit
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarVisit"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Guide</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Book Stay</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">How to Reach</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Registration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Shop -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200">Shop</a>
+                        </li>
+                        <!-- Login -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 ">Login</a>
+                        </li>
+                        <!-- Contact -->
+                        <li>
+                            <button id="dropdownNavbarContactLink" data-dropdown-toggle="dropdownNavbarContact"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Contact
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarContact"
+                                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-fit">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Donate</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Locate us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Career</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSR Initiative</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Navigation -->
+        <section class="bg-[#7B524C]">
+            <div class="py-2.5 lg:py-3">
+                <div class="container md:px-0 mx-auto flex flex-wrap space-x-1.5 text-white text-sm font-medium px-5">
+                    <p><a href="../../">Home</a></p>
+                    <p>></p>
+                    <p><a href="">Activities</a></p>
+                    <p>></p>
+                    <p><a href="">Pushtisanskar Vidyapeeth</a></p>
+                    <p>></p>
+                    <p class="text-[#F9D73A]">Admission Guidelines</p>
+                </div>
+            </div>
+            <div class="h-5 bg-[#FAF5EB]  bg-[url('../assets/guiding-force-top.png')] bg-repeat bg-center"></div>
+        </section>
+
+        <section class="pt-20 pb-48 bg-[#FAF5EB]"
+            style="background-image: url('../assets/heading-bg.webp'),url('../assets/guiding-force-second-bottom.png');background-position: top, bottom;background-repeat: repeat-x, repeat-x;">
+            <div class="container px-5 mx-auto space-y-10 md:gap-x-[30px] lg:gap-x-[60px] grid grid-cols-12">
+                <h2 class="text-[#553E3F] font-bold text-2xl lg:text-4xl col-span-12 lg:col-start-2">Pushtisanskar Vidyapeeth Online Admission</h2>
+                <div
+                    class="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-2 space-y-[26px] gap-[30px] lg:gap-[60px]">
+                    <p class="font-semibold text-[#303030]">
+                        Fill up the online admission form below in order to take admission in Pushtisanskar Vidyapeeth. Please note that Pushtisanskar Vidyapeeth works on Distance Education format so any person from any corner of the world can join Vidyapeeth. First please choose from below given option as per your residence.
+                    </p>
+                    <form class="space-y-[30px]" action="" method="">
+                            <div class="p-[26px] bg-white rounded-xl space-y-[26px]">
+                                <p class="text-lg text-[#8B2937] font-bold">Select Nationality</p>
+                                <div class="space-y-2.5">
+                                    <div class="flex items-center space-x-2.5">
+                                    <input type="radio" name="nationality" id="nationality1"
+                                    class=" w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                            checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                    <label for="nationality1">Indian</label>
+                                </div>
+
+                                <div class="flex items-center space-x-2.5">
+                                    <input type="radio" name="nationality" id="nationality2"
+                                    class=" w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                            checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                    <label for="nationality2">Abroad</label>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="p-[26px] bg-white rounded-xl space-y-[26px]">
+                                <p class="text-lg text-[#8B2937] font-bold">Select Vidyapeeth Course</p>
+                                <div class="space-y-2.5">
+                                    <div class="flex items-center space-x-2.5">
+                                    <input type="radio" name="pushtisanskar-pravesh" id="pustisanskar-pravesh1"
+                                    class=" w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                            checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                    <label for="pustisanskar-pravesh1">PushtiSiddhantPravesh</label>
+                                </div>
+
+                                <div class="flex items-center space-x-2.5">
+                                    <input type="radio" name="pushtisanskar-pravesh" id="pustisanskar-pravesh2"
+                                    class=" w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                            checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                    <label for="pustisanskar-pravesh2">PushtiSiddhantGyan (Shodash Granth)</label>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white">
+                                <div class="p-[26px] bg-[rgba(238,181,195,0.4)] flex justify-between rounded-t-xl">
+                                    <p class="font-bold text-lg text-[#8B2937]"><span class="text-[#303030]">Course :</span> PushtiSiddhantPravesh</p>
+                                    <p class="font-bold text-lg text-[#8B2937]"><span class="text-[#303030]">Academic Year :</span>2023-2024</p>
+                                </div>
+                                <div class="p-[26px] text-[#303030] space-y-[26px] rounded-b-xl grid grid-cols-1 lg:grid-cols-2 lg:gap-x-[26px]">
+                                    <p class="lg:col-span-2 font-bold text-lg text-[#8B2937]">Personal Information</p>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="name" class="block  font-medium">Your Name*</label>
+                                        <input type="text" name="name" id="name" autocomplete="name"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="dob" class="block  font-medium">Date of Birth</label>
+                                        <input type="date" name="dob" id="dob" autocomplete="dob"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="education" class="block  font-medium">Education</label>
+                                        <input type="text" name="education" id="education" autocomplete="education"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Education">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="profession" class="block  font-medium">Profession</label>
+                                        <input type="text" name="profession" id="profession" autocomplete="profession"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Profession">
+                                    </div>
+                                    <div class="col-span-2 flex space-x-4 items-center">
+                                        <label for="Pushtimarh-seva" class="font-medium">Gender:</label>
+
+                                        <div class="flex items-center space-x-2.5">
+                                            <input type="radio" name="gender" id="gender1"
+                                            class="w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                                    checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                            <label for="gender1">Male</label>
+                                        </div>
+
+                                        <div class="flex items-center space-x-2.5">
+                                            <input type="radio" name="gender" id="gender2"
+                                            class="w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                                    checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                            <label for="gender2">Female</label>
+                                        </div>
+                                    </div>
+                                    <p class="lg:col-span-2 font-bold text-lg text-[#8B2937]">Contact Information</p>
+                                    <div class="lg:col-span-2  space-y-2.5 h-fit">
+                                        <label for="email-address" class="block  font-medium">Email address</label>
+                                        <input type="email" name="email-address" id="email-address" autocomplete="email-address"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="phone-number" class="block  font-medium">Phone Number</label>
+                                        <input type="number" name="phone-number" id="phone-number" autocomplete="phone-number"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Phone Number">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="mobile-number" class="block  font-medium">Mobile Number</label>
+                                        <input type="number" name="mobile-number" id="mobile-number" autocomplete="mobile-number"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Phone Number">
+                                    </div>
+                                    <div class="lg:col-span-2 space-y-2.5 h-fit">
+                                        <label for="mobile-number" class="block  font-medium">Address</label>
+                                        <input type="text" name="address1" id="address1" autocomplete="address1"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Address Line 1">
+                                        <input type="text" name="address2" id="address2" autocomplete="address2"
+                                        class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                        placeholder="Address Line 2">
+                                        <input type="text" name="address3" id="address3" autocomplete="address3"
+                                        class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                        placeholder="Address Line 3">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="city" class="block  font-medium">City</label>
+                                        <input type="text" name="city" id="city" autocomplete="city"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your City">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="pincode" class="block  font-medium">Pincode</label>
+                                        <input type="text" name="pincode" id="pincode" autocomplete="pincode"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Pincode">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="taluko" class="block  font-medium">Taluko</label>
+                                        <input type="text" name="taluko" id="taluko" autocomplete="taluko"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Taluka">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="district" class="block  font-medium">District</label>
+                                        <input type="text" name="district" id="district" autocomplete="district"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your District">
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="state" class="block  font-medium">State</label>
+                                        <input type="text" name="state" id="state" autocomplete="state"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your State">
+                                    </div>
+                                    <p class="lg:col-span-2 font-bold text-lg text-[#8B2937]">Other Information</p>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="gurudev-name" class="block  font-medium">Gurudev Name</label>
+                                        <input type="text" name="gurudev-name" id="gurudev-name" autocomplete="gurudev-name"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Gurudev Name">
+                                    </div>
+                                    <div class="space-y-2.5 items-center ">
+                                        <label for="Pushtimarh-seva" class="font-medium">Pushtimarg Seva:</label>
+                                        <div class="flex space-x-4">
+                                            <div class="flex items-center space-x-2.5">
+                                                <input type="radio" name="pushtimarg-seva" id="pushtimarg-seva1"
+                                                class="w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                                        checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                                <label for="pushtimarg-seva1">Yes</label>
+                                            </div>
+
+                                            <div class="flex items-center space-x-2.5">
+                                                <input type="radio" name="pushtimarg-seva" id="pushtimarg-seva2"
+                                                class="w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                                        checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                                <label for="pushtimarg-seva2">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2.5 h-fit">
+                                        <label for="gurudev-name" class="block  font-medium">Course Language</label>
+                                        <select type="text" name="gurudev-name" id="gurudev-name" autocomplete="gurudev-name"
+                                            class="outline-none block w-full rounded-md border font-normal border-[#D4D4D4] py-2 px-3"
+                                            placeholder="Enter Your Gurudev Name">
+                                            <option selected disabled>Select Course Language</option>
+                                            <option class="hover:bg-[#FEEFD1]" value="Gujarati">Gujarati</option>
+                                            <option class="hover:bg-[#FEEFD1]" value="Hindi">Hindi</option>
+                                        </select>
+                                    </div>
+                                    <div class="space-y-2.5 items-center ">
+                                        <label for="Pushtimarh-seva" class="font-medium">Any Addiction:</label>
+                                        <div class="flex space-x-4">
+                                            <div class="flex items-center space-x-2.5">
+                                                <input type="radio" name="addiction" id="addiction1"
+                                                class="w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                                        checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                                <label for="addiction1">Yes</label>
+                                            </div>
+
+                                            <div class="flex items-center space-x-2.5">
+                                                <input type="radio" name="addiction" id="addiction2"
+                                                class="w-4 h-4 border-2 border-[#FFAD6C] rounded-full 
+                                                        checked:bg-[#FFAD6C] checked:border-[#FFAD6C]">
+                                                <label for="addiction2">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="col-span-2 font-semibold p-3.5 rounded-md bg-[#F9D73A] md:w-[30%] md:justify-self-end">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                    </form>
+
+                    <div class="bg-[rgba(238,181,195,0.2)] h-[126px] content-center" style="background-image: url('../assets/open-admission-left.webp'),url('../assets/open-admission-right.webp');background-position: left, right;background-repeat: no-repeat, no-repeat;   ">
+                        <p class="text-center text-[#303030] font-bold text-lg lg:text-xl">If you have any queries about Vidyapeeth Course <span class="block">please contact :  (0285) 2621111</span></p>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-4 xl:col-span-3 space-y-[26px]">
+                    <div class="pb-5 bg-[#FFEFAA] rounded-xl">
+                        <div
+                            class="rounded-t-xl py-10 px-5 bg-[radial-gradient(circle,_#FFFFFF_8%,_#FFFFFF_15%,_#FFEFAA_55%)] justify-items-center">
+                            <img src="../assets/pushtisanskar-pathsala-side-image.webp" alt="Pushtisanskar Pathsala">
+                        </div>
+                        <div class="p-5 md:p-2 lg:p-5 space-y-[3px]">
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>About Vidyapeeth</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Various Courses</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Admission Guidelines</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Download Broucher</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Online Admission</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Student Login</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Result</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <img src="../assets/donate-now.webp" class="w-full" alt="Pushtisanskar - Donate Now">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

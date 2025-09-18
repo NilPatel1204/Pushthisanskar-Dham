@@ -16,3 +16,21 @@ body {
 .pt-serif {
     font-family: 'PT Serif', serif;
 }
+
+#atithi-nivas-slider .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    left:auto !important;
+    right:0 !important;
+}
+
+#atithi-nivas-slider .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    right: 0 !important;
+    transform: none !important;
+}
+#atithi-nivas-slider .swiper-pagination-bullet {
+    background: rgba(249, 215, 58, 0.5) !important;
+    opacity: 1 !important;
+}
+
+#atithi-nivas-slider .swiper-pagination-bullet-active {
+    background-color: #F9D73A !important;
+}

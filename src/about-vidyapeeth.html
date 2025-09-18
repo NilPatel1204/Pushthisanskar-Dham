@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- Font Family CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PT Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Index Js -->
+    <script type="module" src="./index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+
+    <title>Pushtisanskar Dham</title>
+</head>
+
+<body>
+    <header class="sticky top-0 z-50">
+        <nav class="bg-[#FFEFAA]">
+            <div class="container mx-auto flex flex-wrap items-center justify-between p-4  ">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img class="w-[180px] lg:w-auto" src="../assets/pushtisanskar-dham-logo.png"
+                        alt="pushtisanskar-dham" />
+                </a>
+                <button data-collapse-toggle="navbar-multi-level" type="button"
+                    class="inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-multi-level" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto text-black" id="navbar-multi-level">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:hover:bg-[#C02927] lg:px-4 lg:py-2 rounded-sm md:bg-transparent md:p-0 md:hover:text-white transition-colors ease-in-out duration-200"
+                                aria-current="page">Home</a>
+                        </li>
+                        <!-- Campus -->
+                        <li>
+                            <button id="dropdownNavbarCampusLink" data-dropdown-toggle="dropdownNavbarCampus"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Campus
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarCampus"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Acharyashri</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Departments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Development Progress</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Associated
+                                            Institutions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Activities -->
+                        <li>
+                            <button id="dropdownNavbarActivitiesLink" data-dropdown-toggle="dropdownNavbarActivities"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Activities
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarActivities"
+                                class="z-10 hidden font-semibold  shadow-sm w-fit bg-[#FFB52C] transform lg:translate-y-4">
+                                <div class="grid grid-cols-3 gap-5 p-5 text-[#303030]">
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-pathsala.webp" alt="pushthisanskar-pathsala">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Search
+                                                    Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Open
+                                                    New Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Pathshala
+                                                    Student Login</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-vidyaputh.webp"
+                                            alt="pushthisanskar Vidyapeeth">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Vidyapeeth</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Various
+                                                    Courses</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Admission
+                                                    Guidelines</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Online
+                                                    Admission</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Student
+                                                    Login</a>
+                                            </div>
+                                            <div class="py-2 px-4 text-center ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Result</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-unity.webp" alt="pushthisanskar unity">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Pushtisanskar Unity</a>
+                                            </div>
+                                            <div class="py-2 px-4 text-center ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Join
+                                                    Us</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Visit -->
+                        <li>
+                            <button id="dropdownNavbarVisitLink" data-dropdown-toggle="dropdownNavbarVisit"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Visit
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarVisit"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Guide</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Book Stay</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">How to Reach</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Registration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Shop -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200">Shop</a>
+                        </li>
+                        <!-- Login -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 ">Login</a>
+                        </li>
+                        <!-- Contact -->
+                        <li>
+                            <button id="dropdownNavbarContactLink" data-dropdown-toggle="dropdownNavbarContact"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Contact
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarContact"
+                                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-fit">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Donate</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Locate us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Career</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSR Initiative</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Navigation -->
+        <section class="bg-[#7B524C] ">
+            <div class="py-2.5 lg:py-3">
+                <div class="container md:px-0 mx-auto flex flex-wrap space-x-1.5 text-white text-sm font-medium px-5">
+                    <p><a href="../../">Home</a></p>
+                    <p>></p>
+                    <p><a href="">Activities</a></p>
+                    <p>></p>
+                    <p><a href="">Pushtisanskar Vidyapeeth</a></p>
+                    <p>></p>
+                    <p class="text-[#F9D73A]">About Pushtisanskar Vidyapeeth</p>
+                </div>
+            </div>
+            <div class="h-5 bg-[#FAF5EB]  bg-[url('../assets/guiding-force-top.png')] bg-repeat bg-center"></div>
+            <div class="bg-[#2A374B] py-1.5">
+                <p class="container md:px-0 mx-auto text-[#F9D73A] font-bold">PushtisiddhantPravesh  & PushtiSiddhantGyan (Shodash Granth) Admission for Year 2025-2026 has started.</p>
+            </div>
+        </section>
+
+        <!-- Pushti Sanskar Pathshala -->
+        <section class="pt-20 pb-48 bg-[#FAF5EB]"
+            style="background-image: url('../assets/heading-bg.webp'),url('../assets/guiding-force-second-bottom.png');background-position: top, bottom;background-repeat: repeat-x, repeat-x;">
+            <div class="container px-5 mx-auto space-y-10 md:gap-x-[30px] lg:gap-x-[60px] grid grid-cols-12">
+                <h2 class="text-[#553E3F] font-bold text-2xl lg:text-4xl col-span-12 lg:col-start-2">About Pushtisanskar Vidyapeeth</h2>
+                <div class="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-2 gap-[30px] lg:gap-[60px]">
+                    <div class="col-span-8 space-y-18 lg:space-y-28">
+                        <div class="relative">
+                            <img src="../assets/pushtisanskar-vidyapith-image.webp" alt="Pushtisanskar Pathshala">
+                            <div
+                                class="absolute -bottom-10 xl:-bottom-20 2xl:-bottom-18 flex w-full justify-around z-20">
+                                <div
+                                    class="aspect-square h-20 w-24 sm:w-28 md:h-24 md:w-36 xl:w-48 xl:h-36 justify-items-center content-center bg-[url('../assets/text-bg.webp')] bg-cover bg-center sm:space-y-1 md:space-y-[5px]">
+                                    <p class="text-[#C02927] text-md md:text-2xl xl:text-4xl font-bold">4693</p>
+                                    <p class="text-sm md:text-lg xl:text-xl text-[#553E3F]">Students</p>
+                                </div>
+
+                                <div
+                                    class="aspect-square h-20 w-24 sm:w-28 md:h-24 md:w-36 xl:w-48 xl:h-36 justify-items-center content-center bg-[url('../assets/text-bg.webp')] bg-cover bg-center sm:space-y-1 md:space-y-[5px]">
+                                    <p class="text-[#C02927] text-md md:text-2xl xl:text-4xl font-bold">315</p>
+                                    <p class="text-sm md:text-lg xl:text-xl text-[#553E3F]">Cities</p>
+                                </div>
+
+                                <div
+                                    class="aspect-square h-20 w-24 sm:w-28 md:h-24 md:w-36 xl:w-48 xl:h-36 justify-items-center content-center bg-[url('../assets/text-bg.webp')] bg-cover bg-center sm:space-y-1 md:space-y-[5px]">
+                                    <p class="text-[#C02927] text-md md:text-2xl xl:text-4xl font-bold">17</p>
+                                    <p class="text-sm md:text-lg xl:text-xl text-[#553E3F]">Countries</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-5 lg:space-y-8 text-[#303030]">
+                            <p>The spiritual wisdom and divine values depicted in ved- shrimad Bhagvad geeta-Brahmsutras- shrimad Bhagavat are capable of enlightening the life of every individual and the society at a large. These scriptures shows the core meaning of our existence and the divine way of living a life accordingly.</p>
+                            <p>Ved states that - "The one truth is described in different ways by scholastic people. If one follows any path with dedication; self realization is possible."</p>
+                            <p>Although different methods of devotion (sadhana) are appropriate for different devotees ( sadhaks); But if one sails with the clear directives of shrimad Bhagvat geeta genuinely; it is crystal clear that the path of surrender (Sharanagati) and the path of devotion (Bhakti) towards the almighty Bhagavan Shri Krishna is the best way to attain the highest level of enlightenment.</p>
+                            <p>In shrimad Bhagavat Geeta bhagvan says - "I am the origin of everything and everything expands from me". Every living and non-living elements has been created by Param brahm Bhagavan Shri Krishna for the holy sport (Leela). So devotion to Shri Krishna is the basic theme of this universe.</p> 
+                            <p>Shri Vallabhacharyaji says that even after reading and understanding the scriptures if one doesn't follow the path of devotion towards Shri Krishna, he is living in the biggest illusion. So as an ultimate way for a divine life Shri Vallabhacharyaji has shown the course of relishing shri Krishna Sharanagati and shri Krishna bhakti . The message of Shri Vallabhacharyaji is depicted in different granthas. Therfore to understand and follow the tenets of Shri vallabhacharyaji one needs to study pushtimargiya granthas.</p>
+                            <p>For any devotee to have the knowledge of the path which he is a follower is a necessity. Thus for every pushtimarg-devotee it is mandatory to study Shri Vallabhacharyajis tenets.</p>
+                            <p>Pushti Sanskar Vidyapeeth provides an exceptional opportunity to understand the tenets of Pushtimarg through original text of acharyashri. In Pushti Sanskar Vidyapeeth our journey of learning pushtimarg starts with a basic foundation course (Pushtisiddhant pravesh). Then onwards it is a fascinating experience of studying different original text (granthas) of Shri Vallabhacharyaji translated and described in a lucid language.</p>
+                            <p>Pushtisanskar Vidyapeeth operates in the form of "Distance Education". So anyone from any place can take admission into it and gain knowledge about Pushtimarg and various Granths of Shri Vallabh.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-4 xl:col-span-3 space-y-[26px]">
+                    <div class="pb-5 bg-[#FFEFAA] rounded-xl">
+                        <div class="pb-5 bg-[#FFEFAA] rounded-xl">
+                        <div
+                            class="rounded-t-xl py-10 px-5 bg-[radial-gradient(circle,_#FFFFFF_8%,_#FFFFFF_15%,_#FFEFAA_55%)] justify-items-center">
+                            <img src="../assets/pushtisanskar-pathsala-side-image.webp" alt="Pushtisanskar Pathsala">
+                        </div>
+                        <div class="p-5 md:p-2 lg:p-5 space-y-[3px]">
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>About Vidyapeeth</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Various Courses</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Admission Guidelines</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Download Broucher</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Online Admission</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Student Login</p>
+                            </a>
+
+                            <a href="" class="cursor-pointer flex items-center w-full px-[30px] md:px-4 lg:px-[30px] py-2 space-x-3 group
+                                    bg-transparent border border-transparent hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0.5)_100%)]
+                                    hover:border-[#FFAD6C] rounded-md font-semibold">
+                                <img src="../assets/Subtract.webp" alt="Subtract-icon">
+                                <p>Result</p>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <img src="../assets/donate-now.webp" class="w-full" alt="Pushtisanskar - Donate Now">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg-[#553E3F] py-10 md:py-14 lg:py-20">
+            <div class="container px-5 mx-auto grid grid-cols-12 gap-y-10 md:gap-y-16 xl:gap-y-0 md:gap-5">
+                <div class="col-span-12 xl:col-span-3 space-y-6">
+                    <img src="../assets/pushtisanskar-dham-footer-logo.png" alt="pushtisanskar-dham-footer-logo">
+                    <p class="text-sm text-[#E5E5E5] leading-7">Pushtisanskardham is a project proposed by Pushtisanskar
+                        Sansthan
+                        (Institution) that will take shape near Junagadh spread out approximately in 50 acres.</p>
+                    <div>
+                        <a href="" class="bg-[#F9D73A] rounded-lg py-1.5 px-2 text-[#303030]">Donate Now</a>
+                    </div>
+                </div>
+
+                <div class="col-span-12 xl:col-start-5 xl:col-span-6 ">
+                    <div class="grid grid-cols-12 gap-5">
+                        <div class="space-y-5 col-span-12 md:col-span-4">
+                            <p class="font-semibold text-lg md:text-[22px] text-white">Activities</p>
+                            <div class="w-11/12 font-semibold">
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Pushtisanskar Pathshala</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Pushtisanskar Vidyapeeth</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A]  text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Pushtisanskar Unity</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5 col-span-6 md:col-span-4">
+                            <p class="font-semibold text-lg md:text-[22px] text-white">Visit</p>
+                            <div class="w-11/12 font-semibold">
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-opacity-50 border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Visitor Guide</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Book Stay</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        How to Reach</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A]  text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Visitor Registration</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5 col-span-6 md:col-span-4">
+                            <p class="font-semibold text-lg md:text-[22px] text-white">Useful links</p>
+                            <div class="w-11/12 font-semibold">
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-opacity-50 border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Shop</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Locate us</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A] border-b border-[rgba(256,256,256,0.15)] text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        Career</p>
+                                </a>
+                                <a href="#">
+                                    <p
+                                        class="text-white hover:text-[#F9D73A]  text-sm md:text-base py-2 md:py-4 transition-colors duration-300 ease-in-out">
+                                        CSR
+                                        Initiative</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-span-12 pt-5 md:pt-8 border-t border-[rgba(256,256,256,0.15)]">
+                            <div class="flex justify-between">
+                                <button href=""
+                                    class="border-2 text-sm md:text-base border-[#F9D73A] hover:bg-[#E5E5E5] hover:text-[#303030] transition-all duration-300 ease-in-out text-white cursor-pointer rounded-full py-2 sm:py-2.5 px-2.5 sm:px-3.5  font-semibold">Download
+                                    Brochure</button>
+                                <div class="space-x-1.5 sm:space-x-2.5 flex">
+                                    <a href="#" class="group">
+                                        <!-- <img src="../assets/facebook-icon.svg" 
+                        class="w-9 h-9 group-hover:filter group-hover:invert group-hover:sepia group-hover:hue-rotate-[20deg] group-hover:saturate-200" 
+                        alt="facebook"> -->
+                                        <img src="../assets/facebook.png" class="md:opacity-75 md:hover:opacity-100"
+                                            alt="facebook">
+                                    </a>
+                                    <a href="#"><img src="../assets/youtube.png"
+                                            class="md:opacity-75 md:hover:opacity-100" alt="youtube"></a>
+                                    <a href="#"><img src="../assets/instagram.png"
+                                            class="md:opacity-75 md:hover:opacity-100" alt="instagram"></a>
+                                    <a href="#"><img src="../assets/linkedin.png"
+                                            class="md:opacity-75 md:hover:opacity-100" alt="linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-span-12 xl:col-span-2 space-y-5">
+                    <p class="font-semibold text-lg md:text-[22px] text-white">Google Map</p>
+                    <iframe class="rounded-lg"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.084544144002!2d70.51584631470993!3d21.62162898568024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39580351711f6381%3A0x8adc119d0bafe85e!2sShree+Pushtisanskar+Dham!5e0!3m2!1sen!2sin!4v1547245918982"
+                        width="100%" height="280" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                </div>
+
+                <div class="col-span-12 xl:col-start-5 xl:col-span-6">
+
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#3B3434] py-7">
+            <div class="container px-5 md:px-0 text-sm md:text-base mx-auto text-[#FFFFFF]">
+                <p>Copyright &copy; 2025 Pushtisanskar Dham. All Rights Reserved.</p>
+            </div>
+        </div>
+
+        <!-- Scroll buttom -->
+        <a id="scrollToTopBtn" class="group w-12 h-12 bg-[#F9D73A] rounded-full fixed bottom-4 right-4 flex items-center justify-center cursor-pointer
+          opacity-0 translate-y-4 pointer-events-none transition-all duration-100 ease-in-out overflow-hidden z-100">
+            <img src="../assets/scroll-top-arrow.svg" alt="Double-Arrow"
+                class="w-3 invert-0 transition-transform duration-100 transform group-hover:animate-bounce" />
+        </a>
+    </footer>
+</body>
+
+</html>
