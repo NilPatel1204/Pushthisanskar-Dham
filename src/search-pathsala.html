@@ -303,7 +303,8 @@
                     class="col-span-12 md:col-span-8 lg:col-span-7 lg:col-start-2 gap-[30px] lg:gap-x-[60px] lg:gap-y-0 flex flex-col">
                     <div class="col-span-8 space-y-10">
                         <img src="../assets/search-pathsala.webp" alt="Search Pathshala">
-                        <p class="text-[#303030]">You can send your children to Pushtisanskar Pathshala and help them
+                        <p class="text-[#303030] lg:leading-[30px]">You can send your children to Pushtisanskar
+                            Pathshala and help them
                             get our rich heritage of Pushtimarg Sanskar which will not only help strengthen their roots
                             to Pushtimarg but will help in all round development of their personality in all the fields
                             of life. Pathshala runs on weekly basis, mostly on every Sunday for around 2 hours so
@@ -374,10 +375,16 @@
                         <button href=""
                             class="border-2 text-sm md:text-base bg-[#FFFFFF] hover:border-[#FFFFFF] border-[#F9D73A] hover:bg-[#F9D73A] text-[#303030] transition-all duration-300 ease-in-out  cursor-pointer rounded-full py-2 sm:py-2.5 px-2.5 sm:px-3.5  font-semibold">Download</button>
                     </div>
+
                     <div class="overflow-x-auto">
-                        <table class="w-full border border-[#E4E4E4] border-collapse border-b-none">
-                            <thead>
-                                <tr class="bg-[#EEB5C3]">
+                        <table class="w-full border border-[#E4E4E4] border-collapse border-b-none min-w-[800px]">
+                            <thead class="sticky top-0 z-20">
+                                <tr class="bg-[#EEB5C3] text-[#303030]">
+                                    <!-- Sticky Details column for mobile -->
+                                    <th
+                                        class="border border-[#DE9BAC] py-3 w-[16%] lg:hidden sticky left-0 bg-[#EEB5C3] z-30 border-r-2">
+                                        Details
+                                    </th>
                                     <th class="border border-[#DE9BAC] py-3 w-[3%]">No.</th>
                                     <th class="border border-[#DE9BAC] py-3 w-[10%]">Reg. No.</th>
                                     <th class="border border-[#DE9BAC] py-3 w-[38%]">Address</th>
@@ -385,60 +392,87 @@
                                     <th class="border border-[#DE9BAC] py-3 w-[9%]">District</th>
                                     <th class="border border-[#DE9BAC] py-3 w-[9%]">Mobile No.</th>
                                     <th class="border border-[#DE9BAC] py-3 w-[17%]">Sanchalak Name</th>
-                                    <th class="border border-[#DE9BAC] py-3 w-[16%]">Details</th>
+                                    <!-- Details column for desktop -->
+                                    <th class="border border-[#DE9BAC] py-3 w-[16%] hidden lg:table-cell">
+                                        Details
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody class="text-[#303030] text-sm">
                                 <tr class="odd:bg-[#FFFFFF] even:bg-[#F5F5F5]">
-                                    <td class="p-3 border border-[#E4E4E4] text-center">1</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">AHMD15</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">House No.C/6, Danav Park
-                                        Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Ahmedabad</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Ahmedabad</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">9586804700</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Pravinaben Ashwinbhai Manvar
+                                    <!-- Sticky Details column for mobile -->
+                                    <td
+                                        class="p-3 border lg:hidden sticky left-0 bg-white z-20 border-r-2 border-[#E4E4E4]">
+                                        <button onclick="openModal()" class="text-[#C1282D]">View</button>
                                     </td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center"><button onclick="openModal()"
-                                            class="text-[#C1282D]">View</button></td>
+                                    <td class="p-3 border border-[#E4E4E4]">1</td>
+                                    <td class="p-3 border border-[#E4E4E4]">AHMD15</td>
+                                    <td class="p-3 border border-[#E4E4E4]">House No.C/6, Danav Park Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Ahmedabad</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Ahmedabad</td>
+                                    <td class="p-3 border border-[#E4E4E4]">9586804700</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Pravinaben Ashwinbhai Manvar
+                                    </td>
+                                    <!-- Normal Details column for desktop -->
+                                    <td class="p-3 border border-[#E4E4E4] text-center hidden lg:table-cell">
+                                        <button onclick="openModal()" class="text-[#C1282D]">View</button>
+                                    </td>
                                 </tr>
                                 <tr class="odd:bg-[#FFFFFF] even:bg-[#F5F5F5]">
-                                    <td class="p-3 border border-[#E4E4E4] text-center">1</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">AHMD15</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">House No.C/6, Danav Park
-                                        Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Ahmedabad</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Ahmedabad</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">9586804700</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Pravinaben Ashwinbhai Manvar
+                                    <!-- Sticky Details column for mobile -->
+                                    <td
+                                        class="p-3 border text-center lg:hidden sticky left-0 bg-white z-20 border-r-2 border-[#E4E4E4]">
+                                        <button onclick="openModal()" class="text-[#C1282D]">View</button>
                                     </td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center"><button onclick="openModal()"
-                                            class="text-[#C1282D]">View</button></td>
+                                    <td class="p-3 border border-[#E4E4E4]">2</td>
+                                    <td class="p-3 border border-[#E4E4E4]">AHMD15</td>
+                                    <td class="p-3 border border-[#E4E4E4]">House No.C/6, Danav Park Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Ahmedabad</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Ahmedabad</td>
+                                    <td class="p-3 border border-[#E4E4E4]">9586804700</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Pravinaben Ashwinbhai Manvar
+                                    </td>
+                                    <!-- Normal Details column for desktop -->
+                                    <td class="p-3 border border-[#E4E4E4] text-center hidden lg:table-cell">
+                                        <button onclick="openModal()" class="text-[#C1282D]">View</button>
+                                    </td>
                                 </tr>
                                 <tr class="odd:bg-[#FFFFFF] even:bg-[#F5F5F5]">
-                                    <td class="p-3 border border-[#E4E4E4] text-center">1</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">AHMD15</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">House No.C/6, Danav Park
-                                        Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Ahmedabad</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Ahmedabad</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">9586804700</td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center">Pravinaben Ashwinbhai Manvar
+                                    <!-- Sticky Details column for mobile -->
+                                    <td
+                                        class="p-3 border text-center lg:hidden sticky left-0 bg-white z-20 border-r-2 border-[#E4E4E4]">
+                                        <button onclick="openModal()" class="text-[#C1282D]">View</button>
                                     </td>
-                                    <td class="p-3 border border-[#E4E4E4] text-center"><button onclick="openModal()"
-                                            class="text-[#C1282D]">View</button></td>
+                                    <td class="p-3 border border-[#E4E4E4]">3</td>
+                                    <td class="p-3 border border-[#E4E4E4]">AHMD15</td>
+                                    <td class="p-3 border border-[#E4E4E4]">House No.C/6, Danav Park Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Ahmedabad</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Ahmedabad</td>
+                                    <td class="p-3 border border-[#E4E4E4]">9586804700</td>
+                                    <td class="p-3 border border-[#E4E4E4]">Pravinaben Ashwinbhai Manvar
+                                    </td>
+                                    <!-- Normal Details column for desktop -->
+                                    <td class="p-3 border border-[#E4E4E4] text-center hidden lg:table-cell">
+                                        <button onclick="openModal()" class="text-[#C1282D]">View</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+
+
+
+
                 </div>
             </div>
         </section>
         <!-- Popup Overlay -->
-        <div id="pathshalaModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
+        <div id="pathshalaModal"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
 
             <!-- Modal Content -->
-            <div class="bg-white p-[26px] rounded-xl space-y-[26px] w-11/12 md:w-3/4 lg:w-2/3 relative max-h-[90vh] overflow-y-auto">
+            <div
+                class="bg-white p-[26px] rounded-xl space-y-[26px] w-11/12 md:w-3/4 lg:w-2/3 relative max-h-[90vh] overflow-y-auto">
 
                 <!-- Header -->
                 <div class="flex justify-between items-center">
@@ -454,31 +488,49 @@
                     <div class="w-full md:w-1/2">
                         <table class="w-full border border-collapse border-[#D4D4D4] text-[#303030]">
                             <tr>
-                                <td class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base w-[30%]">Pathshala Reg No.</td>
+                                <td
+                                    class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base w-[30%]">
+                                    Pathshala Reg No.</td>
                                 <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">AHMD15</td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">Address</td>
-                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">House No.C/6, Danav Park Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
+                                <td
+                                    class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    Address</td>
+                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">House No.C/6,
+                                    Danav Park Society, Gate No. 3, Opp Muktidham Estate, Bopal</td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">City</td>
-                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">Ahmedabad</td>
+                                <td
+                                    class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    City</td>
+                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">Ahmedabad
+                                </td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">Pincode</td>
+                                <td
+                                    class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    Pincode</td>
                                 <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">320008</td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">Taluko</td>
-                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">Ahmedabad</td>
+                                <td
+                                    class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    Taluko</td>
+                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">Ahmedabad
+                                </td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base ">District</td>
-                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">Ahmedabad</td>
+                                <td
+                                    class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base ">
+                                    District</td>
+                                <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">Ahmedabad
+                                </td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base ">State</td>
+                                <td
+                                    class="text-[#303030] opacity-70 p-2.5 border border-[#D4D4D4] text-sm md:text-base ">
+                                    State</td>
                                 <td class="px-2 py-1 md:py-2 border border-[#D4D4D4] text-sm md:text-base">GUJARAT</td>
                             </tr>
                         </table>
@@ -488,23 +540,34 @@
                     <div class="w-full md:w-1/2">
                         <table class="w-full border border-collapse border-[#D4D4D4] text-[#303030]">
                             <tr>
-                                <td class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base w-[30%]">Pathshala Reg Date</td>
+                                <td
+                                    class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base w-[30%]">
+                                    Pathshala Reg Date</td>
                                 <td class="px-2 border border-[#D4D4D4] text-sm md:text-base">20 Jun, 2024</td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">Phone No.</td>
+                                <td
+                                    class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    Phone No.</td>
                                 <td class="px-2 border border-[#D4D4D4] text-sm md:text-base">-</td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">Mobile No.</td>
+                                <td
+                                    class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    Mobile No.</td>
                                 <td class="px-2 border border-[#D4D4D4] text-sm md:text-base">9586804700</td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">Sanchalak Name</td>
-                                <td class="px-2 border border-[#D4D4D4] text-sm md:text-base">Pravinaben Ashwinbhai Manvar</td>
+                                <td
+                                    class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    Sanchalak Name</td>
+                                <td class="px-2 border border-[#D4D4D4] text-sm md:text-base">Pravinaben Ashwinbhai
+                                    Manvar</td>
                             </tr>
                             <tr>
-                                <td class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">Total Students</td>
+                                <td
+                                    class="text-[#303030] opacity-70 px-2.5 py-1 md:py-2.5 border border-[#D4D4D4] text-sm md:text-base">
+                                    Total Students</td>
                                 <td class="px-2 border border-[#D4D4D4] text-sm md:text-base">2</td>
                             </tr>
                         </table>
