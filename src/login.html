@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- Font Family CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PT Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Index Js -->
+    <script type="module" src="./index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+
+    <title>Pushtisanskar Dham</title>
+</head>
+
+<body>
+    <header class="sticky top-0 z-50">
+        <nav class="bg-[#FFEFAA]">
+            <div class="container mx-auto flex flex-wrap items-center justify-between p-4  ">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img class="w-[180px] lg:w-auto" src="../assets/pushtisanskar-dham-logo.png"
+                        alt="pushtisanskar-dham" />
+                </a>
+                <button data-collapse-toggle="navbar-multi-level" type="button"
+                    class="inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-multi-level" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto text-black" id="navbar-multi-level">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 md:hover:bg-[#C02927] lg:px-4 lg:py-2 rounded-sm md:bg-transparent md:p-0 md:hover:text-white transition-colors ease-in-out duration-200"
+                                aria-current="page">Home</a>
+                        </li>
+                        <!-- Campus -->
+                        <li>
+                            <button id="dropdownNavbarCampusLink" data-dropdown-toggle="dropdownNavbarCampus"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Campus
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarCampus"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Acharyashri</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Departments</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Development Progress</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Associated
+                                            Institutions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Activities -->
+                        <li>
+                            <button id="dropdownNavbarActivitiesLink" data-dropdown-toggle="dropdownNavbarActivities"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Activities
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarActivities"
+                                class="z-10 hidden font-semibold  shadow-sm w-fit bg-[#FFB52C] transform lg:translate-y-4">
+                                <div class="grid grid-cols-3 gap-3 lg:gap-x-9 lg:gap-y-0 p-5 text-[#303030]">
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-pathsala.webp" alt="pushthisanskar-pathsala">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Search
+                                                    Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Open
+                                                    New Pathshala</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Pathshala
+                                                    Student Login</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-vidyaputh.webp"
+                                            alt="pushthisanskar Vidyapeeth">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Vidyapeeth</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Various
+                                                    Courses</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Admission
+                                                    Guidelines</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Online
+                                                    Admission</a>
+                                            </div>
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Student
+                                                    Login</a>
+                                            </div>
+                                            <div class="py-2 px-4 text-center ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Result</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-5 bg-gradient-to-b from-[#FFFFFF] via-[#FFFEF9] to-[#FFF6D3] rounded-xl justify-items-center">
+                                        <img src="../assets/pushthisanskar-unity.webp" alt="pushthisanskar unity">
+                                        <div class="pt-2.5">
+                                            <div
+                                                class="py-2 px-4 text-center bg-[url('../assets/nav-bottom.png')] bg-no-repeat bg-bottom ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">About
+                                                    Pushtisanskar Unity</a>
+                                            </div>
+                                            <div class="py-2 px-4 text-center ">
+                                                <a href=""
+                                                    class="hover:text-[#FFB52C] transition-colors duration-200 ease-in-out">Join
+                                                    Us</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Visit -->
+                        <li>
+                            <button id="dropdownNavbarVisitLink" data-dropdown-toggle="dropdownNavbarVisit"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Visit
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarVisit"
+                                class="z-10 hidden font-normal rounded-lg shadow-sm w-fit bg-white">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Guide</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Book Stay</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">How to Reach</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Visitor Registration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Shop -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200">Shop</a>
+                        </li>
+                        <!-- Login -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 ">Login</a>
+                        </li>
+                        <!-- Contact -->
+                        <li>
+                            <button id="dropdownNavbarContactLink" data-dropdown-toggle="dropdownNavbarContact"
+                                class="flex items-center justify-between w-full py-2 px-3 lg:px-4 lg:py-2 md:p-0 md:w-auto md:hover:bg-[#C02927] md:hover:text-white rounded-sm transition-colors ease-in-out duration-200 cursor-pointer group">
+                                Contact
+                                <svg class="ms-1 w-3 h-3 transition-colors duration-200 text-[#C1282D] group-hover:text-white"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" fill="none">
+                                    <path
+                                        d="M9.22539 1.33316C9.28114 1.38896 9.30901 1.45313 9.30901 1.52568C9.30901 1.59822 9.28114 1.6624 9.22539 1.7182L5.32876 5.61887C5.27302 5.67467 5.20891 5.70258 5.13644 5.70258C5.06397 5.70258 4.99986 5.67467 4.94412 5.61887L1.04749 1.7182C0.99174 1.6624 0.963867 1.59822 0.963867 1.52568C0.963867 1.45313 0.99174 1.38896 1.04749 1.33316L1.46558 0.914629C1.52133 0.858826 1.58543 0.830924 1.6579 0.830924C1.73037 0.830924 1.79448 0.858826 1.85023 0.914629L5.13644 4.20425L8.42265 0.914629C8.4784 0.858826 8.54251 0.830924 8.61498 0.830924C8.68745 0.830924 8.75155 0.858826 8.8073 0.914629L9.22539 1.33316Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbarContact"
+                                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-fit">
+                                <ul class="py-2 text-sm text-black" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Donate</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Locate us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Career</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSR Initiative</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel -->
+    <section>
+        <div class="w-full lg:relative" data-twe-carousel-fade data-twe-carousel-item data-twe-carousel-active>
+            <video class="w-full h-auto" autoplay loop muted playsinline>
+                <source src="https://tecdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+            </video>
+
+            <div class="bg-[#FFF4C5] mt-10 lg:mt-0 rounded-[20px] p-5 lg:p-[30px] space-y-10 w-fit lg:absolute lg:top-1/6 lg:right-50">
+                <div class="justify-items-center text-center">
+                    <p class="capitalize text-lg lg:text-xl font-semibold">Welcome to</p>
+                    <img src="../assets/pushtisanskar-dham-logo.webp" alt="pushtisanskar-dham">
+                </div>
+                <div class="space-y-6 lg:space-y-8">
+                    <div class="space-y-5">
+                        <div class="space-y-4">
+                            <div class="space-y-1.5">
+                                <p class="font-semibold">Email Address</p>
+                                <input type="email" name="email" placeholder="Enter Your Email" class="bg-[#FFF9E0] p-4 outlnie-none border border-[#E6D27B] rounded-md" required />
+                            </div>
+                            <div class="space-y-1.5">
+                                <p class="font-semibold">Password</p>
+                                <input type="password" name="password" placeholder="Enter Your password" class="bg-[#FFF9E0] p-4 outlnie-none border border-[#E6D27B] rounded-md" required />
+                            </div>
+                        </div>
+                        <button class="border border-[#E6D27B] rounded-md w-full bg-[#F9D73A] p-4  transition-all duration-300 ease-in-out">Login</button>
+                    </div>
+                    <div class="w-full text-center mx-auto">
+                        <a href="" class="text-[#C1282D] w-full font-semibold text-sm ">Forgot Password?</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
